@@ -1,0 +1,11 @@
+Assignment –3
+Overview of SQL.
+
+1) Does ANSI recognize the data type DATE?
+   ANS:Yes...ANSI is recognize the DATE data type.  
+      > Default DATE Format is " YYYY-MM-DD" and range is 
+       1st jan 1000 As to 31st DEC 9999AD.
+
+2) Which subdivision of SQL is used to insert values in tables?
+  ANS: To insert data into table we can use normal INSERT command.
+  
