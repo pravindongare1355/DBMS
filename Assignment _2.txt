@@ -12,4 +12,12 @@ Introducing Relational Databases.
     Row:- tupple , entity, opportunity
     Coloumn:- attribute, method
 4) Why isn’t it possible to see the first five rows of a table?
-   ANS:Order by and offset
+   ANS:It possible to see the first five rows of a table Because
+        >When you select  a table the order of rows in the output,
+		depends on the row address.
+	    >It will always be in Ascending order of row address.
+        >when we UPDATE a row,if the row length is increasing,then 
+		the entire row mayb be moved to some other address.
+        >later,when we SELECT from the table,the row will 
+		be at some other position.
+
