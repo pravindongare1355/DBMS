@@ -1,0 +1,120 @@
+create database cdac_exercise;
+use cdac_exercise;
+
+1. create table SEMP
+   (
+	Empno char(4),
+	Empname char(20),
+	Basic float(9,2),
+	Deptno char(2),
+	Depthead char(4)
+   );
+   desc SEMP;
+
+
+2. create table SDEPT
+   (
+	Deptno char(2),
+	Deptname char(15)
+   );
+   desc SDEPT;
+
+
+3. insert into SDEPT(Deptno,Deptname)
+   values('10','development'),
+         ('20','training');
+   select * from SDEPT;
+
+
+4. insert into SEMP(Empno, Empname, Basic, Deptno, Depthead)
+   values('0001','SUNIL',6000,'10',null),
+	 ('0002','HIREN',8000,'20',null),
+         ('0003','ALI',4000,'10',0001),
+	 ('0004','GEORGE',6000,null,'0002');
+   select * from SEMP;
+
+
+==> create table SUPPLIER
+    (
+	 `S#` char(4),
+	 Sname char(20),
+	 Status char(10),
+	 City varchar(20)
+    );
+    desc SUPPLIER;
+
+
+    create table PARTS
+    (
+         `P#` char(4),
+	  Pname char(20),
+          Color char(15),
+	  Weight int(4),
+ 	  City varchar(15)
+    );
+    desc PARTS;
+
+
+    create table PROJECTS
+    (
+           `J#` char(4),
+            Jname char(20),
+	    City varchar(15)
+     );
+     desc PROJECTS;
+
+
+    create table SUPPLIER_PARTS_PROJECT
+    (
+     `S#` char(4),
+     `P#` char(4),
+     `J#` char(4),
+      QTY int(6)
+     );
+    desc SUPPLIER_PARTS_PROJECT;  
+
+    insert into SUPPLIER(`S#`, Sname, Status, City)
+    values('S1', 'bob', '25' , 'london'),
+           ('S2', 'shinchan', '22', 'Athens'),
+           ('S3', 'oswald', '12', 'london'); 
+            ('S4', 'Jay', '10', 'Athens');   
+             ('S5', 'Anne', '28', 'Paris');   
+
+             
+
+    insert into PARTS(`P#`, Pname, Color,Weight ,City)
+    values('P1', 'koko', 'white' ,20, 'Gondia'),
+           ('P2', 'kittu', 'black',13, 'pune'),
+           ('P3', 'jiya', 'red',14,'London');
+           ('P4', 'tanie', 'red',12,'paris');
+              
+
+    insert into PROJECTS(`J#`, Jname, City)
+    values('J1', 'Noddy' ,'Athens'),
+          ('J2', 'Nobita','Paris'),
+          ('J3','Kiteretsu','Athens');
+
+      insert into SUPPLIER_PARTS_PROJECT(`S#`,`P#`,`J#`, QTY)
+    values('S1', 'P1' ,'J1',400),
+          ('S2', 'P2','J2',724),
+          ('S3','P3','J1',250);
+
+
+5. select * from SUPPLIER;                                                                                       //*(Supplier as S)*//
+
+6. select `S#`, Sname from SUPPLIER;
+
+7. select Pname,Color from PARTS where city='london';
+
+8. select * from Supplier where city='london';
+
+9.select * from SUPPLier where city='PARIS' or city='Athens';
+
+10.select * from PROJECTS where city='Athens';
+
+
+
+     
+           
+     
+
