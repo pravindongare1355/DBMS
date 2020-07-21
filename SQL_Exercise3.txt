@@ -1,0 +1,141 @@
+Exercise 3
+
+
+1.
+
+Select Sname from supplier
+Where ascii(upper(substr(Sname,1,1)))=ascii(Sname);
++---------+
+| Sname   |
++---------+
+| Jay     |
+| Ray     |
+| Lavanya |
++---------+
+
+
+2.
+
+Select upper(Sname) from supplier;
+
++--------------+
+| upper(Sname) |
++--------------+
+| BOB          |
+| SHINCHAN     |
+| OSWALD       |
+| JAY          |
+| RAY          |
+| LAVANYA      |
++--------------+
+
+
+3.
+
+Select lower(Sname) from supplier;
++--------------+
+| lower(Sname) |
++--------------+
+| bob          |
+| shinchan     |
+| oswald       |
+| jay          |
+| ray          |
+| lavanya      |
++--------------+
+
+
+4.
+
+Select lpad(Sname,25,' ')from supplier;
++---------------------------+
+| lpad(Sname,25,' ')        |
++---------------------------+
+|                       bob |
+|                  shinchan |
+|                    oswald |
+|                       Jay |
+|                       Ray |
+|                   Lavanya |
++---------------------------+
+
+
+5.
+
+select replace(Sname,'La','ro')from supplier;
+
++--------------------------+
+| replace(Sname,'La','ro') |
++--------------------------+
+| bob                      |
+| shinchan                 |
+| oswald                   |
+| Jay                      |
+| Ray                      |
+| rovanya                  |
+| roila                    |
++--------------------------+
+
+
+6.
+
+ select replace(replace(Sname,'l','r'),'a','o') from supplier;
++-----------------------------------------+
+| replace(replace(Sname,'l','r'),'a','o') |
++-----------------------------------------+
+| bob                                     |
+| shinchon                                |
+| osword                                  |
+| Joy                                     |
+| Roy                                     |
+| Lovonyo                                 |
+| Loiro                                   |
+| brock                                   |
++-----------------------------------------+
+
+
+
+
+7. 
+
+select Sname,length(Sname) from supplier;
+
++----------+---------------+
+| Sname    | length(Sname) |
++----------+---------------+
+| bob      |             3 |
+| shinchan |             8 |
+| oswald   |             6 |
+| Jay      |             3 |
+| Ray      |             3 |
+| Lavanya  |             7 |
+| Laila    |             5 |
++--------------------------+
+
+
+8.
+
+ select * from supplier where soundex(Sname)=soundex('blake');
++------+-------+--------+--------+
+| S#   | Sname | Status | City   |
++------+-------+--------+--------+
+| S8   | black | 27     | raipur |
++------+-------+--------+--------+
+
+9.
+
+
+
+10.
+select dayname("2020-07-20");
+
+
+
+
+
+
+
+
+
+
+
